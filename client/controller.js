@@ -1,0 +1,6 @@
+
+
+
+$(function() {
+	Fractal.init();
+});
