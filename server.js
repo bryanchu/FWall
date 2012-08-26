@@ -1,6 +1,6 @@
 var express = require('express');
 
-var app = exp.createServer(exp.logger(), exp.bodyParser(), exp.static(__dirname + '/client')),
+var app = express.createServer(express.logger(), express.bodyParser(), express.static(__dirname + '/client')),
 
 app.get('/', function(request, response) {
   response.sendfile(__dirname + '/client/index.html');
