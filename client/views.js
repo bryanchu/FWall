@@ -19,8 +19,7 @@ Fractal = function() {
 			//set stroke styles
 			ctx.strokeStyle = 'rgb(225, 225, 225)';
 			ctx.shadowBlur  = 10;
-			// ctx.shadowColor = endColor;
-			ctx.shadowColor = 'rgb(81, 167, 150)';
+			ctx.shadowColor = cfg.endColor;
 			ctx.lineWidth   = 2;
 			ctx.lineCap     = 'round';
 			//set stroke gradient
@@ -81,7 +80,7 @@ Fractal = function() {
 				//trigger mouseup actions
 				canvasWrapper.addEventListener('mouseup', function(mouseEvent) {
 					cfg.startColor = 'white';
-					cfg.endColor   = 'rgb(54, 130, 245)';
+					cfg.endColor   = 'rgb(22, 131, 221)';
 					createFractals(cfg);
 				});
 		}
