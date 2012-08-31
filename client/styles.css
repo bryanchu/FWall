@@ -1,9 +1,11 @@
 body
 {
 	background-color: black;
+	cursor: crosshair;
 }
 
 canvas
 {
-
+	position: absolute;
+	top: 0px;
 }
