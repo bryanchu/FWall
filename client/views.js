@@ -186,7 +186,7 @@ Fractal = function() {
 			var gradient = ctx.createLinearGradient(cfg.mouseX, cfg.mouseY, cfg.endX, cfg.endY);
 			gradient.addColorStop(0, cfg.startColor);
 			// gradient.addColorStop(.5, endColor);
-			// gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+			gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 			ctx.strokeStyle = gradient;
 			//draw the arc
 			ctx.beginPath();
