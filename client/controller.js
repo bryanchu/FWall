@@ -51,8 +51,8 @@ $(function() {
 	Fractal.init(random);
 	$('#random')[0].checked = random;
 	$('#random').click(function() {
-		// window.location = 'http://fractalz.herokuapp.com?random=' + this.checked;
-		window.location = 'file:///C:/Users/Bryan/Documents/GitHub/Fractalz/client/index.html?random=' + this.checked;
+		window.location = 'http://fractalz.herokuapp.com?random=' + this.checked;
+		// window.location = 'file:///C:/Users/Bryan/Documents/GitHub/Fractalz/client/index.html?random=' + this.checked;
 	});
 	$('.radio').click(function() {
 		Fractal.ctrl.globalColor = this.value;
