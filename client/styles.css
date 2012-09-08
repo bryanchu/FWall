@@ -1,11 +1,52 @@
 body
 {
-	background-color: black;
 	cursor: crosshair;
+	margin: 0px;
 }
 
 canvas
 {
 	position: absolute;
 	top: 0px;
+}
+
+#savepngbtn
+{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	z-index: 100;
+}
+
+#randomContainer
+{
+	position: fixed;
+	right: 30px;
+	top: 0px;
+	color: white;
+	text-align: right;
+	z-index: 101;
+}
+
+#random
+{
+	right: 0px;
+	top: 0px;
+	position: fixed;
+	z-index: 102;
+}
+
+#radioContainer
+{
+	color: white;
+	position: fixed;
+	right: 30px;
+	top: 30px;
+	z-index: 100;
+}
+
+input
+{
+	position: fixed;
+	right: 0px;
 }

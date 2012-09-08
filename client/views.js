@@ -37,7 +37,9 @@ Fractal = function() {
 		//trigger mouseup actions
 		canvasWrapper.addEventListener('mouseup', function(mouseEvent) {
 			cfg.startColor = 'white';
-			cfg.endColor   = 'rgb(22, 131, 221)';
+			// cfg.endColor   = 'rgb(22, 131, 221)';
+			// cfg.endColor = 'rgb(39, 242, 52)';
+			cfg.endColor = Fractal.ctrl.globalColor;
 			createFractals(cfg);
 		});
 	}
@@ -152,7 +154,8 @@ Fractal = function() {
 						endX: Fractal.ctrl.points[3].x,
 						endY: Fractal.ctrl.points[3].y,
 						startColor: 'white',
-						endColor: 'rgb(22, 131, 221)'
+						endColor: Fractal.ctrl.globalColor
+						// endColor: 'rgb(39, 242, 52)'
 					}
 					createFractals(cfg);
 					break;
@@ -197,7 +200,9 @@ Fractal = function() {
 	}
 
 	return {
-		init: function() {
+		assignControlledMouseHandlers: assignControlledMouseHandlers,
+		assignRandomMouseHandlers: assignRandomMouseHandlers,
+		init: function(random) {
 				var that = {
 					canvas: $('#stage')[0],
 					mouseCanvas1: $('#mouse1')[0],
@@ -207,7 +212,7 @@ Fractal = function() {
 					canvasWrapper: $('#canvasWrapper')[0],
 					endOnEdge: true,
 					endOnEdges: true,
-					random: false
+					random: random
 				};
 
 				that.canvas.width  = $(window).width();
@@ -221,7 +226,14 @@ Fractal = function() {
 				that.mouseCanvas4.width  = $(window).width();
 				that.mouseCanvas4.height = $(window).height();
 
-				if (that.random){
+
+				//paint the whole thing black
+				var ctx = that.canvas.getContext('2d');
+				ctx.fillStyle = "black";
+				ctx.fillRect(0, 0, that.canvas.width, that.canvas.height);
+
+
+				if (that.random == 'true'){
 					assignRandomMouseHandlers.apply(that);
 				}
 				else {

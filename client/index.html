@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>
-	Fractal Wallpaper/Background Generator
+	"Fractal" Wallpaper/Background Generator
 </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <script type="text/javascript">
@@ -15,13 +15,26 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-<script type="text/javascript" src="http://code.createjs.com/easeljs-0.4.2.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="canvas2image.js"></script>
 <script type="text/javascript" src="views.js"></script>
 <script type="text/javascript" src="controller.js"></script>
 <link rel="stylesheet" type="text/css" href="styles.css" /link>
 </head>
 <body>
+  <div id="randomContainer">
+    <input type="checkbox" id="random" value="random" />
+    Random
+  </div>
+  <div id="radioContainer">
+    <input type="radio" name="color" id="red" value="red" class="radio">Red<br />
+    <input type="radio" name="color" id="orange" value="orange" class="radio">Orange<br />
+    <input type="radio" name="color" id="yellow" value="yellow" class="radio">Yellow<br />
+    <input type="radio" name="color" id="green" value="green" class="radio">Green<br />
+    <input type="radio" name="color" id="blue" value="blue" class="radio">Blue<br />
+    <input type="radio" name="color" id="purple" value="purple" class="radio">Purple<br />
+  </div>
+  <input type="button" id="savepngbtn" value="Download wallpaper">
 	<div id="canvasWrapper" width="100%" height="100%">
 		<canvas id="stage"></canvas>
     <canvas id="mouse1"></canvas>
