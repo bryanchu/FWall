@@ -49,4 +49,10 @@ input
 {
 	position: fixed;
 	right: 0px;
+	border: none;
+}
+
+.radio
+{
+	-webkit-appearance: checkbox;
 }
