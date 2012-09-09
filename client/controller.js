@@ -49,7 +49,7 @@ Fractal.ctrl = {
 $(function() {
 	var random = Fractal.util.getQString('random');
 	Fractal.init(random);
-	$('#random')[0].checked = random;
+	$('#random')[0].checked = random == "true" ? true : false;
 	$('#random').click(function() {
 		window.location = 'http://fractalz.herokuapp.com?random=' + this.checked;
 		// window.location = 'file:///C:/Users/Bryan/Documents/GitHub/Fractalz/client/index.html?random=' + this.checked;
