@@ -143,6 +143,9 @@ Fractal = function() {
 					Fractal.ctrl.numOfClicks = 0;
 					var edgePoint = Fractal.util.getEdgePoint(Fractal.ctrl.points[2].x, Fractal.ctrl.points[2].y, mouseEvent.layerX, mouseEvent.layerY, that.canvas.width, that.canvas.height);
 
+					//calculate the interpolated control points
+					Fractal.ctrl.points = Fractal.util.bezierFromIntersection(Fractal.ctrl.points[0], Fractal.ctrl.points[1], Fractal.ctrl.points[2], Fractal.ctrl.points[3]);
+
 					var cfg = {
 						ctx: that.canvas.getContext('2d'),
 						mouseX: Fractal.ctrl.points[0].x,
