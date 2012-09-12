@@ -6,6 +6,7 @@ Fractal.util = {
 		}
 	},
 	getEdgePoint: function(sX, sY, mX, mY, wX, wY) {
+		console.log(arguments);
 		//check for division by 0
 		if (mX - sX == 0 || mY - sY == 0) {
 			return [sX, sY];
@@ -23,7 +24,7 @@ Fractal.util = {
 			return [eX2, eY2];
 		}
 		else {
-			return [eX1, eY2];
+			return [eX1, eY1];
 		}
 	},
 	getQString: function(name)

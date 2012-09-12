@@ -51,6 +51,7 @@ Fractal = function() {
 			this.startX = startX;
 			this.startY = startY;
 			this.mouseEvent = mouseEvent;
+			console.log(this);
 			this.edgePoint = Fractal.util.getEdgePoint(this.startX, this.startY, this.mouseEvent.layerX, this.mouseEvent.layerY, that.canvas.width, that.canvas.height);
 			createLongLine.apply(this);
 			Fractal.ctrl.points[0].x = this.edgePoint[0];
